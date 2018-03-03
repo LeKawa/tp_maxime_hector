@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Modal</title>
+</head>
+<body>
+
+    <button>Sésame ouvre toi</button>
+
+    <div class="modal">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+            <p>custom header</p>
+            <p>default body</p>
+            <p>default footer</p>
+        </div>
+    </div>
+
+    <script>
+        var btn = document.querySelector('button');
+        var modal = document.querySelector('.modal');
+        var overlay = document.querySelector('.modal_overlay');
+
+        btn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+        overlay.addEventListener('click', function() {
+            modal.style.display = '';
+        });
+    </script>
+</body>
+</html>

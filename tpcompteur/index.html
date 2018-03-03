@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>tpcompteur</title>
+</head>
+
+<body>
+	<section class="compteur_all">
+	<div class="compteur_border">
+		<p class="compteur_content">0</p>
+	</div>
+	<div>
+		<button class="minus">-</button>
+		<button class="plus" id="mor">+</button>
+	</div>
+	</section>
+</body>
+<script type="text/javascript">
+	var plus = document.querySelector('.plus');
+	var minus = document.querySelector('.minus');
+	var compteur = document.querySelector('.compteur_content');
+
+	plus.addEventListener('click', function (){
+		var value = compteur.textContent;
+
+		if (value < 10) {
+		value = Number(value) + 1;
+		compteur.textContent = value;
+		}
+	});
+
+	minus.addEventListener('click', function (){
+		var value = compteur.textContent;
+
+		if (value  > 0) {
+		value = Number(value) - 1;
+		compteur.textContent = value;}
+
+	});
+
+
+
+
+</script>
+</html>

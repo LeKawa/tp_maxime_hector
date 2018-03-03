@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Square</title>
+    <style>
+        .square {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px 10px 10px 0;
+            background: navy;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="li">add square</button>
+    </div>
+
+    <div class="squares">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+  <script>
+
+
+  var square = document.querySelector('.square')
+  var btn = document.querySelector('button');
+  var squares = document.querySelector('.squares');
+
+  btn.addEventListener('click',function() {
+
+    var div = document.createElement('DIV');
+    div.classList.add('square');
+    div.addEventListener('click')
+  }
+
+
+  var square = document.querySelectorAll('.square');
+  for (var i = 0; i < square.length; i++) {
+    square[i].addEventListener('click', function(){
+      alert("coucou");
+    });
+  }
+
+
+  </script>
+
+</body>
+</html>

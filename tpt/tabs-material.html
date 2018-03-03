@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      .tabs {
+        width: 500px;
+        margin: auto;
+        border: 1px solid #000;
+      }
+      .tabs-nav {
+        display: flex;
+      }
+      .tabs-nav a {
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 4px solid #000;
+      }
+
+      .tabs-nav a:hover,
+      .tabs-nav a.is-active {
+        background: pink;
+      }
+
+      .tabs-content {
+        display: none;
+      }
+
+      .tabs-content.is-active {
+        display: block;
+      }
+      .tabs-content::first-letter {
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <div class="tabs">
+
+      <nav class="tabs-nav">
+        <a href="#page1">Tab 1</a>
+        <a href="#page2">Tab 2</a>
+        <a href="#page3">Tab 3</a>
+        <a href="#page4">Tab 4</a>
+      </nav>
+
+      <div class="tabs-content">
+
+        <article id="page1" class="tabs-content is-active">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+
+
+        <article id="page2" class="tabs-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+
+
+        <article id="page3" class="tabs-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+
+        <article id="page4" class="tabs-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+
+      </div>
+
+    </div>
+
+    <script>
+
+      var tab = document.querySelectorAll('.tabs-nav a');
+      var content = document.querySelectorAll('.tabs-content');
+
+      for (var i = 0; i < tab.length; i++) {
+        tab[i].addEventListener('click', function() {
+
+          for (var i = 0; i < tab.length; i++) {
+            if (tab[a] === this) {
+              this.classList.add('is-active');
+            } else {
+              tab[a].classList.remove('is-active');
+
+            }
+          }
+
+          for (var a = 0; a < content.length; i++) {
+            var href = content[a].getAttribute('href');
+            href = href.replace('#','');
+
+            if (this.getAttribute('href') === content[a].getAttribute('id')) {
+              content[a].style.display = 'block';
+            } else {
+              content[a].style.display = 'none';
+            }
+          }
+
+        });
+      }
+    </script>
+  </body>
+
+</html>
